@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Run the Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #4a6fa5;
+            border-bottom: 2px solid #4a6fa5;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #387eff;
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        ol li, ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Run the Interactive Resume Game</h1>
+    
+    <div class="warning">
+        <strong>Important:</strong> This game must be run from a web server to avoid CORS errors when loading assets. 
+        Opening the HTML file directly in a browser will not work properly.
+    </div>
+    
+    <h2>Option 1: Using the included Node.js server (Recommended)</h2>
+    
+    <ol>
+        <li>Make sure you have <a href="https://nodejs.org/" target="_blank">Node.js</a> installed on your computer.</li>
+        <li>Open a command prompt or terminal in the game directory.</li>
+        <li>Run the following command:
+            <pre>node server.js</pre>
+        </li>
+        <li>Open your web browser and navigate to: <code>http://localhost:3000</code></li>
+    </ol>
+    
+    <div class="success">
+        This is the recommended method as it uses the custom server that's specifically configured for this game.
+    </div>
+    
+    <h2>Option 2: Using another web server</h2>
+    
+    <p>If you prefer, you can use any of these alternative methods:</p>
+    
+    <h3>Using Node.js http-server</h3>
+    <pre>
+# Install http-server globally (if not already installed)
+npm install -g http-server
+
+# Run the server in the game directory
+http-server
+
+# Then open http://localhost:8080 in your browser
+</pre>
+    
+    <h3>Using Python's built-in server</h3>
+    <pre>
+# For Python 3
+python -m http.server
+
+# For Python 2
+python -m SimpleHTTPServer
+
+# Then open http://localhost:8000 in your browser
+</pre>
+    
+    <h3>Using VS Code Live Server</h3>
+    <p>If you're using Visual Studio Code:</p>
+    <ol>
+        <li>Install the "Live Server" extension</li>
+        <li>Right-click on index.html and select "Open with Live Server"</li>
+        <li>The game will open in your default browser</li>
+    </ol>
+    
+    <h2>Troubleshooting</h2>
+    
+    <h3>Common Issues:</h3>
+    <ul>
+        <li><strong>CORS Errors:</strong> If you see CORS errors in the console, make sure you're running the game through a web server and not opening the HTML file directly.</li>
+        <li><strong>Audio not playing:</strong> Click anywhere on the game to enable audio. Browsers require user interaction before allowing audio to play.</li>
+        <li><strong>Missing assets:</strong> Some placeholder assets are used if the actual assets are not found. This is normal and won't affect the core functionality.</li>
+    </ul>
+    
+    <p>For more information, please refer to the README.md file.</p>
+    
+    <div class="success">
+        <p><a href="index.html">Return to the game</a> (make sure you're running it through a web server)</p>
+    </div>
+</body>
+</html>

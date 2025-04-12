@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif Chtourou - Interactive Resume</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+    <div id="skip-menu">
+        <button id="skip-button">Skip Game</button>
+        <div id="resume-sections" class="hidden">
+            <button data-section="intro">Introduction</button>
+            <button data-section="skills">Skills</button>
+            <button data-section="experience">Experience</button>
+            <button data-section="projects">Projects</button>
+            <button data-section="contact">Contact</button>
+        </div>
+    </div>
+    <div id="audio-control">
+        <button id="mute-button">🔊</button>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="js/scenes/BootScene.js"></script>
+    <script src="js/scenes/PreloadScene.js"></script>
+    <script src="js/scenes/MenuScene.js"></script>
+    <script src="js/scenes/IntroScene.js"></script>
+    <script src="js/scenes/SkillsScene.js"></script>
+    <script src="js/scenes/ExperienceScene.js"></script>
+    <script src="js/scenes/ProjectsScene.js"></script>
+    <script src="js/scenes/SAPProjectScene.js"></script>
+    <script src="js/scenes/ContactScene.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
